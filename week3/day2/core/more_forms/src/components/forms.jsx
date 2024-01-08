@@ -34,8 +34,8 @@ const UserForm = () => {
     };
 
     const EmailMessage = () => {
-        if (email.length > 0 && email.length < 2 ) {
-            return "Invalid email must be at least 2 characters";
+        if (email.length > 0 && !email.includes("@")) {
+            return "Invalid email format";
         }
         return null;
     };
@@ -57,31 +57,31 @@ const UserForm = () => {
     return (
         <form onSubmit={createUser}>
             <div>
-                <label>Prénom: </label> 
+                <label>First Name: </label> 
                 <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                 <h3>{InputMessage()}</h3>
             </div>
             <div>
-                <label>Nom: </label> 
+                <label>Last Name: </label> 
                 <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                 <h3>{LastNameMessage()}</h3>
             </div>
             <div>
-                <label>Adresse e-mail: </label> 
+                <label>Email Address: </label> 
                 <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <h3>{EmailMessage()}</h3>
             </div>
             <div>
-                <label>Mot de passe: </label>
+                <label>Password: </label>
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 <h3>{PasswordMessage()}</h3>
             </div>
             <div>
-                <label>Confirmer le mot de passe: </label>
+                <label>Confirm Password: </label>
                 <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 <h3>{ConPasswordMessage()}</h3>
             </div>
-          
+            <input type="submit" value="Create User" />
         </form>
     );
 };
