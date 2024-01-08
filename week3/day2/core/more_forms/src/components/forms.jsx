@@ -34,8 +34,8 @@ const UserForm = () => {
     };
 
     const EmailMessage = () => {
-        if (email.length > 0 && !email.includes("@")) {
-            return "Invalid email format";
+        if (email.length > 0 && email.length >2) {
+            return "Invalid email must be at least 2 characters";
         }
         return null;
     };
