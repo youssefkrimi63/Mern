@@ -20,7 +20,7 @@ const UserForm = () => {
     };
 
     const InputMessage = () => {
-        if (firstName.length > 0 && firstName.length > 2) {
+        if (firstName.length > 0 && firstName.length < 2) {
             return "First Name must be at least 2 characters";
         }
         return null;
