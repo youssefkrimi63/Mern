@@ -62,7 +62,7 @@ const UserForm = () => {
                 <h3>{InputMessage()}</h3>
             </div>
             <div>
-                <label>Last Name: </label> 
+                <label>Nom: </label> 
                 <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                 <h3>{LastNameMessage()}</h3>
             </div>
@@ -81,7 +81,7 @@ const UserForm = () => {
                 <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 <h3>{ConPasswordMessage()}</h3>
             </div>
-            <input type="submit" value="Create User" />
+            
         </form>
     );
 };
