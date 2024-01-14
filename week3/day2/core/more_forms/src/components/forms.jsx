@@ -55,7 +55,7 @@ const UserForm = () => {
     };
 
     return (
-        <form onSubmit={createUser}>
+        <form>
             <div>
                 <label>First Name: </label> 
                 <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
@@ -81,6 +81,18 @@ const UserForm = () => {
                 <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                 <h3>{ConPasswordMessage()}</h3>
             </div>
+
+
+
+            <div>
+                        <h4>first Name : {firstName}</h4>
+                        <h4>last Name : {lastName}</h4>
+                        <h4>Email  : {email}</h4>
+                        <h4>password : {password}</h4>
+                        <h4>confirm Password : {confirmPassword}</h4>
+
+
+                    </div>
             
         </form>
     );

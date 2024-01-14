@@ -92,6 +92,18 @@ const UserForm = () => {
                             <p>Passwords must match</p>
                         ) : null}
                     </div>
+
+
+
+                    <div>
+                        <h3>first Name : {firstName}</h3>
+                        <h3>last Name : {lastName}</h3>
+                        <h3>email : {email}</h3>
+                        <h3>password : {password}</h3>
+                        <h3>confirm Password : {confirmPw}</h3>
+
+
+                    </div>
                     
                 </form>
             </>
