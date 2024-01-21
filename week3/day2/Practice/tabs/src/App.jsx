@@ -1,5 +1,5 @@
 import React from 'react';
-import Tabs from './components/form'; // Assuming Tabs component is in the same directory
+import Tabs from './components/form'; 
 import './App.css';
 const App = () => {
   const tabs = [
@@ -10,7 +10,6 @@ const App = () => {
 
   return (
     <div>
-     
       <Tabs tabs={tabs} />
     </div>
   );

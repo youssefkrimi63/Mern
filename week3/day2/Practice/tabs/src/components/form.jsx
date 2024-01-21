@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './Tabs.css'; 
 
 const Tabs = ({ tabs }) => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [Tab, setTab] = useState(0);
 
   const handleTabClick = (index, onClick) => {
-    setActiveTab(index);
+    setTab(index);
     if (onClick) {
       onClick();
     }
@@ -17,14 +17,14 @@ const Tabs = ({ tabs }) => {
         {tabs.map((tab, index) => (
           <div
             key={index}
-            className={`tab-header ${activeTab === index ? 'active' : ''}`}
+            className={`tab-header ${Tab === index ? 'active' : ''}`}
             onClick={() => handleTabClick(index, tab.onClick)}
           >
             {tab.label}
           </div>
         ))}
       </div>
-      <div className="tab-content">{tabs[activeTab].content}</div>
+      <div className="tab-content">{tabs[Tab].content}</div>
     </div>
   );
 };
