@@ -16,14 +16,14 @@ const Create = () => {
     const SubmitHandler = (e) => {
         e.preventDefault()
         console.log("it is working")
-        const tepObjectMovie = {
+        const tepObjectprodect = {
             title,
             description,
             price,
             
         }
 
-        axios.post("http://localhost:5000/api/Product ", tepObjectMovie)
+        axios.post("http://localhost:5000/api/Product ", tepObjectprodect)
             .then(res => {
                 console.log("✅✅✅✅✅", res.data)
                 nav("/")
